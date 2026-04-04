@@ -195,7 +195,7 @@ function initCounters() {
 // ===== Scroll Reveal Animation =====
 function initScrollReveal() {
     const elements = document.querySelectorAll(
-        '.timeline-item, .highlight-card, .skill-category, .edu-card, .contact-card, .about-text, .section-header'
+        '.timeline-item, .highlight-card, .skill-category, .edu-card, .contact-card, .about-text, .section-header, .featured-role, .featured-highlight, .cta-content'
     );
 
     // Add reveal styles via class instead of inline

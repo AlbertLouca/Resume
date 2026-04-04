@@ -466,6 +466,17 @@ img {
     transform: translateY(-2px);
 }
 
+.btn-ghost {
+    background: transparent;
+    color: var(--accent-tertiary);
+    padding: 14px 24px;
+}
+
+.btn-ghost:hover {
+    color: var(--text-primary);
+    background: rgba(108, 92, 231, 0.08);
+}
+
 /* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
@@ -535,6 +546,170 @@ img {
     font-weight: 800;
     letter-spacing: -1px;
     color: var(--text-primary);
+}
+
+/* ===== Featured Current Role Section ===== */
+.featured-role {
+    background: var(--bg-card);
+    border: 1px solid rgba(108, 92, 231, 0.3);
+    border-radius: var(--radius-xl);
+    padding: 40px 44px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.featured-role::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-primary);
+}
+
+.featured-role-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border-radius: 50px;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.25);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #22c55e;
+    margin-bottom: 24px;
+}
+
+.featured-role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.featured-role-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+}
+
+.featured-role-company {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--accent-tertiary);
+    display: block;
+    margin-top: 4px;
+}
+
+.featured-role-description {
+    margin-bottom: 28px;
+}
+
+.featured-role-description p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.featured-role-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.featured-highlight {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.featured-highlight-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    background: var(--gradient-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-tertiary);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.featured-highlight h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.featured-highlight p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+}
+
+.featured-highlight p strong {
+    color: var(--text-primary);
+}
+
+.featured-role-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag-featured {
+    background: rgba(108, 92, 231, 0.15);
+    border-color: rgba(108, 92, 231, 0.35);
+    color: var(--accent-tertiary);
+    font-size: 0.8rem;
+    padding: 6px 14px;
+}
+
+/* ===== CTA Banner ===== */
+.cta-banner {
+    padding: 80px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-content {
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.15), rgba(168, 85, 247, 0.1));
+    border: 1px solid rgba(108, 92, 231, 0.3);
+    border-radius: var(--radius-xl);
+    padding: 56px 48px;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.cta-content p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 550px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+}
+
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 /* ===== About Section ===== */
@@ -1141,6 +1316,28 @@ img {
     .scroll-indicator {
         display: none;
     }
+
+    .featured-role {
+        padding: 28px 24px;
+    }
+
+    .featured-role-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .featured-role-title {
+        font-size: 1.35rem;
+    }
+
+    .cta-content {
+        padding: 40px 24px;
+    }
+
+    .cta-actions {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1163,5 +1360,10 @@ img {
 
     .timeline-item {
         gap: 0;
+    }
+
+    .featured-highlight {
+        flex-direction: column;
+        gap: 10px;
     }
 }
